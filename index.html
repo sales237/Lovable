@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rumble Tools Oy — Autonomous Drone &amp; Sensor Systems</title>
+  <meta name="description" content="Rumble Tools Oy builds autonomous drone stations, multi-sensor towers and patrol drones for 24/7 protection of energy infrastructure, farmland, borders and industrial sites. See what each tool is for and why.">
+  <meta property="og:title" content="Rumble Tools — Autonomous 24/7 Surveillance &amp; Field Drones">
+  <meta property="og:description" content="SkyNest drone stations, multi-sensor towers and autonomous patrol drones — what they are used for, and why.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" fill="none" stroke="#2ee6d6" stroke-width="2"><circle cx="16" cy="16" r="4"/><circle cx="6" cy="6" r="3.5"/><circle cx="26" cy="6" r="3.5"/><circle cx="6" cy="26" r="3.5"/><circle cx="26" cy="26" r="3.5"/><path d="M9 9l4 4M23 9l-4 4M9 23l4-4M23 23l-4-4"/></svg>
+      <span>RUMBLE TOOLS<small>Autonomous systems · Finland</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul id="menu">
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#use">Where to use</a></li>
+      <li><a href="#why">Why</a></li>
+      <li><a href="#case">Field trial</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="contact.html">Request a quote</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Rumble Tools Oy</p>
+      <h1>Autonomous eyes in the sky — on duty 24/7.</h1>
+      <p class="lead">Drone stations, multi-sensor towers and patrol drones that guard energy infrastructure, farmland, borders and industrial sites — automatically, in all Nordic weather, without a pilot on site.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="contact.html">Talk to us about your site</a>
+        <a class="btn btn-ghost" href="#use">Which tool do I need?</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>24/7</b><span>autonomous readiness</span></div>
+        <div class="stat"><b>0</b><span>pilots needed on site</span></div>
+        <div class="stat"><b>~120 ha</b><span>covered in field trial</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Network diagram: sensor tower detects → AI → drone verifies -->
+      <svg viewBox="0 0 420 300" fill="none">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#2ee6d6" stop-opacity=".1"/><stop offset="1" stop-color="#2ee6d6" stop-opacity=".9"/></linearGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="300" rx="14" fill="#0e1822"/>
+        <g stroke="#23344a"><path d="M0 60H420M0 120H420M0 180H420M0 240H420M70 0V300M140 0V300M210 0V300M280 0V300M350 0V300"/></g>
+        <!-- tower -->
+        <g stroke="#9aabbf" stroke-width="2"><path d="M60 250L75 120L90 250M66 200H84M70 160H80"/></g>
+        <circle cx="75" cy="115" r="7" fill="#2ee6d6"/>
+        <circle cx="75" cy="115" r="30" stroke="#2ee6d6" stroke-opacity=".35"/>
+        <circle cx="75" cy="115" r="55" stroke="#2ee6d6" stroke-opacity=".18"/>
+        <!-- AI hub -->
+        <rect x="175" y="40" width="80" height="54" rx="10" fill="#152130" stroke="#2ee6d6"/>
+        <text x="215" y="64" fill="#e8eef5" font-size="12" font-family="Inter,sans-serif" text-anchor="middle" font-weight="700">AI</text>
+        <text x="215" y="80" fill="#9aabbf" font-size="9" font-family="Inter,sans-serif" text-anchor="middle">analysis</text>
+        <path d="M100 105L172 72" stroke="url(#g1)" stroke-width="2" stroke-dasharray="5 4"/>
+        <path d="M258 72L330 120" stroke="url(#g1)" stroke-width="2" stroke-dasharray="5 4"/>
+        <!-- dock -->
+        <rect x="300" y="235" width="80" height="22" rx="4" fill="#152130" stroke="#9aabbf"/>
+        <text x="340" y="250" fill="#9aabbf" font-size="9" font-family="Inter,sans-serif" text-anchor="middle">SkyNest dock</text>
+        <path d="M340 232V170" stroke="#f5a524" stroke-dasharray="3 4"/>
+        <!-- drone -->
+        <g transform="translate(340 140)">
+          <rect x="-12" y="-6" width="24" height="12" rx="4" fill="#e8eef5"/>
+          <path d="M-12 0H-30M12 0H30" stroke="#e8eef5" stroke-width="2"/>
+          <ellipse cx="-30" cy="-4" rx="14" ry="3" stroke="#2ee6d6"/>
+          <ellipse cx="30" cy="-4" rx="14" ry="3" stroke="#2ee6d6"/>
+          <path d="M0 6L-28 70H28Z" fill="#2ee6d6" fill-opacity=".12"/>
+        </g>
+        <!-- target -->
+        <circle cx="200" cy="225" r="6" fill="#f5a524"/>
+        <circle cx="200" cy="225" r="14" stroke="#f5a524" stroke-opacity=".5"/>
+        <text x="200" y="258" fill="#f5a524" font-size="10" font-family="Inter,sans-serif" text-anchor="middle">alert</text>
+        <text x="75" y="280" fill="#9aabbf" font-size="10" font-family="Inter,sans-serif" text-anchor="middle">1 · Detect</text>
+        <text x="215" y="114" fill="#9aabbf" font-size="10" font-family="Inter,sans-serif" text-anchor="middle">2 · Classify</text>
+        <text x="340" y="280" fill="#9aabbf" font-size="10" font-family="Inter,sans-serif" text-anchor="middle">3 · Verify</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The tools</p>
+      <h2>One system, four building blocks</h2>
+      <p>Each tool works on its own, but they are designed to work together: towers detect, the AI decides, drones go and look — and everything reports to one dashboard.</p>
+    </div>
+
+    <div class="product">
+      <div class="p-art" aria-hidden="true">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="12" fill="#0e1822"/><rect x="70" y="120" width="180" height="50" rx="8" fill="#1b2a3c" stroke="#9aabbf"/><path d="M70 120L95 100H225L250 120" stroke="#9aabbf" fill="#152130"/><rect x="130" y="135" width="60" height="6" rx="3" fill="#2ee6d6"/><g transform="translate(160 70)"><rect x="-14" y="-7" width="28" height="14" rx="4" fill="#e8eef5"/><path d="M-14 0H-38M14 0H38" stroke="#e8eef5" stroke-width="2"/><ellipse cx="-38" cy="-4" rx="16" ry="3" stroke="#2ee6d6"/><ellipse cx="38" cy="-4" rx="16" ry="3" stroke="#2ee6d6"/></g><path d="M160 80V98" stroke="#f5a524" stroke-dasharray="3 3"/></svg>
+      </div>
+      <div class="p-body">
+        <span class="tag">Drone station</span>
+        <h3>SkyNest Drone Station</h3>
+        <p>An autonomous docking and charging station that keeps a drone ready around the clock. When a sensor raises an alert — or on a programmed schedule — the drone launches by itself, flies to the spot, streams live video and returns to charge.</p>
+        <ul class="spec">
+          <li>Automatic launch, landing &amp; charging</li>
+          <li>Weather-protected housing</li>
+          <li>Scheduled patrols or alert-triggered flights</li>
+          <li>Live video to control room</li>
+          <li>Inspection &amp; verification only — no offensive capability</li>
+          <li>Remote software updates</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product flip">
+      <div class="p-art" aria-hidden="true">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="12" fill="#0e1822"/><path d="M140 180L160 40L180 180M146 140H174M151 100H169" stroke="#9aabbf" stroke-width="2.5" fill="none"/><rect x="146" y="30" width="28" height="18" rx="4" fill="#1b2a3c" stroke="#2ee6d6"/><circle cx="160" cy="39" r="4" fill="#2ee6d6"/><path d="M174 39A70 70 0 0 1 290 70" stroke="#2ee6d6" stroke-opacity=".5" fill="none"/><path d="M174 39A95 95 0 0 1 300 110" stroke="#2ee6d6" stroke-opacity=".25" fill="none"/><path d="M146 39A70 70 0 0 0 30 70" stroke="#2ee6d6" stroke-opacity=".5" fill="none"/><path d="M146 39A95 95 0 0 0 20 110" stroke="#2ee6d6" stroke-opacity=".25" fill="none"/></svg>
+      </div>
+      <div class="p-body">
+        <span class="tag">Fixed surveillance</span>
+        <h3>Multi-Sensor Tower</h3>
+        <p>A modular mast carrying radar, lidar and EO/IR (day and thermal) cameras. It watches a perimeter continuously and spots people, vehicles, drones or animals long before they reach the fence — day, night, fog or snow.</p>
+        <ul class="spec">
+          <li>Radar + lidar + EO/IR cameras</li>
+          <li>Continuous perimeter coverage</li>
+          <li>Rapid deployment, modular build</li>
+          <li>All-weather, Nordic-rated</li>
+          <li>AI classification cuts false alarms</li>
+          <li>Triggers SkyNest drones automatically</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="p-art" aria-hidden="true">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="12" fill="#0e1822"/><path d="M20 170C80 150 120 175 180 160S280 150 300 165" stroke="#23344a" stroke-width="30" fill="none"/><path d="M40 140Q160 40 280 140" stroke="#f5a524" stroke-dasharray="6 6" fill="none"/><g transform="translate(160 78)"><rect x="-12" y="-6" width="24" height="12" rx="4" fill="#e8eef5"/><path d="M-12 0H-30M12 0H30" stroke="#e8eef5" stroke-width="2"/><ellipse cx="-30" cy="-4" rx="13" ry="3" stroke="#2ee6d6"/><ellipse cx="30" cy="-4" rx="13" ry="3" stroke="#2ee6d6"/></g><g fill="#9aabbf"><path d="M70 160l6-6 6 6M240 158l6-6 6 6M200 168l5-5 5 5"/></g></svg>
+      </div>
+      <div class="p-body">
+        <span class="tag">Patrol drone</span>
+        <h3>Robocopter — Autonomous Patrol</h3>
+        <p>An autonomous multicopter that flies programmed routes over large areas. Used for wide-area monitoring and for humane wildlife deterrence: flying like a bird of prey, it moves flocks of geese off farmland without touching them.</p>
+        <ul class="spec">
+          <li>Programmed patrol routes</li>
+          <li>Sensor-based detection</li>
+          <li>Bird-of-prey flight pattern</li>
+          <li>Covers large fields &amp; sites</li>
+          <li>Harmless to protected species</li>
+          <li>No continuous human labour</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product flip">
+      <div class="p-art" aria-hidden="true">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="12" fill="#0e1822"/><g transform="translate(160 70)"><rect x="-22" y="-9" width="44" height="18" rx="5" fill="#e8eef5"/><path d="M-22 0H-56M22 0H56" stroke="#e8eef5" stroke-width="2.5"/><ellipse cx="-56" cy="-5" rx="20" ry="4" stroke="#2ee6d6"/><ellipse cx="56" cy="-5" rx="20" ry="4" stroke="#2ee6d6"/><path d="M-8 9V30M8 9V30" stroke="#9aabbf"/><rect x="-20" y="30" width="40" height="28" rx="3" fill="#f5a524" fill-opacity=".85"/></g><path d="M30 175H290" stroke="#23344a" stroke-width="2"/></svg>
+      </div>
+      <div class="p-body">
+        <span class="tag">Logistics</span>
+        <h3>SkyCarrier — Cargo Drone</h3>
+        <p>A heavier-lift drone for moving spare parts, samples and supplies to places that are slow or costly to reach by road — remote installations, islands, field crews and sites cut off by snow or flooding.</p>
+        <ul class="spec">
+          <li>Point-to-point cargo flights</li>
+          <li>Reaches remote &amp; off-road sites</li>
+          <li>Replaces costly vehicle trips</li>
+          <li>Works with the same docking network</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="use" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where to use them</p>
+      <h2>Which tool fits your site?</h2>
+      <p>A quick guide to the sites we protect most often, which tools we recommend there, and why.</p>
+    </div>
+
+    <div class="cards" style="margin-bottom:32px">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V9l6-4 6 4v12M10 21v-5h4v5"/></svg></div>
+        <span class="tag">Energy</span>
+        <h3>Oil &amp; gas infrastructure</h3>
+        <p>Pipelines, terminals, compressor stations and tank farms are long, remote and attractive targets.</p>
+        <ul><li>Towers on the perimeter</li><li>SkyNest drones verify every alert</li><li>Routine pipeline inspection flights</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <span class="tag">Critical infrastructure</span>
+        <h3>Power, water &amp; telecom</h3>
+        <p>Substations, power lines, water plants and masts — many unmanned, all critical.</p>
+        <ul><li>Intrusion detection 24/7</li><li>Fast visual check without a call-out</li><li>Line &amp; mast inspection</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12M12 12C12 7 8 4 3 4c0 5 4 8 9 8zM12 12c0-5 4-8 9-8 0 5-4 8-9 8z"/></svg></div>
+        <span class="tag">Agriculture</span>
+        <h3>Farmland &amp; crop protection</h3>
+        <p>Protected barnacle geese damage grass and grain fields across Finland every spring and autumn.</p>
+        <ul><li>Robocopter patrols over fields</li><li>Humane, legal deterrence</li><li>Shared use between farms</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+        <span class="tag">Authorities</span>
+        <h3>Border &amp; public safety</h3>
+        <p>Long, sparsely populated borders and coastlines need eyes where patrols cannot be all the time.</p>
+        <ul><li>Long-range sensor towers</li><li>Rapid drone verification</li><li>Search &amp; rescue support</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg></div>
+        <span class="tag">Industry</span>
+        <h3>Industrial &amp; logistics yards</h3>
+        <p>Quarries, ports, mines, construction sites and storage yards with expensive equipment outdoors.</p>
+        <ul><li>Theft &amp; vandalism prevention</li><li>Night-time drone rounds</li><li>Stockpile &amp; progress mapping</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+        <span class="tag">Environment</span>
+        <h3>Environmental monitoring</h3>
+        <p>Forests, waterways and protected areas: watch for fires, leaks, floods and wildlife movement.</p>
+        <ul><li>Thermal cameras spot heat &amp; fire</li><li>Scheduled survey flights</li><li>Data for authorities &amp; research</li></ul>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="match">
+        <thead><tr><th>Your need</th><th>Recommended tools</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Stop intruders before they reach the fence</td><td>Multi-Sensor Tower + SkyNest</td><td class="why">Radar &amp; thermal detect at range; a drone confirms in minutes, so guards only respond to real threats.</td></tr>
+          <tr><td>Inspect pipelines or power lines regularly</td><td>SkyNest Drone Station</td><td class="why">Scheduled automatic flights replace costly helicopter or foot patrols and build a visual history.</td></tr>
+          <tr><td>Keep geese off fields without harming them</td><td>Robocopter patrol</td><td class="why">Bird-of-prey flight scares flocks away; fully compatible with EU Birds Directive protection.</td></tr>
+          <tr><td>Watch a remote, unmanned site</td><td>Tower + SkyNest</td><td class="why">No staff on site — the system detects, verifies and reports by itself.</td></tr>
+          <tr><td>Deliver parts or samples to hard-to-reach places</td><td>SkyCarrier</td><td class="why">Faster and cheaper than sending a vehicle or boat for a small payload.</td></tr>
+          <tr><td>Temporary event or construction site</td><td>Mobile tower + drone</td><td class="why">Modular kit deploys quickly and moves on when the project ends.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why Rumble Tools</p>
+      <h2>Why autonomous — and why us</h2>
+      <p>Traditional guarding and manual patrols are expensive, tiring and leave gaps. Autonomous systems never sleep.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3><span>01</span>Always on</h3><p>Coverage 24 hours a day, 365 days a year — nights, weekends and holidays included.</p></div>
+      <div class="why-item"><h3><span>02</span>Lower running cost</h3><p>Fewer call-outs, fewer guard hours and no helicopter inspections. Staff focus on real incidents.</p></div>
+      <div class="why-item"><h3><span>03</span>Faster response</h3><p>A drone is on scene in minutes with live video, so you know exactly what is happening before anyone drives out.</p></div>
+      <div class="why-item"><h3><span>04</span>Fewer false alarms</h3><p>Multiple sensors plus AI classification tell a person from a moose, and a drone confirms before you act.</p></div>
+      <div class="why-item"><h3><span>05</span>Built for the North</h3><p>Designed and tested in Finland for snow, frost, darkness and wind — the conditions where other systems fail.</p></div>
+      <div class="why-item"><h3><span>06</span>Safe &amp; responsible</h3><p>Inspection and verification only — no offensive capability. Wildlife deterrence is harmless to animals.</p></div>
+      <div class="why-item"><h3><span>07</span>Scales with you</h3><p>Start with one tower or one drone; add sites, share systems between operators, grow into a network.</p></div>
+      <div class="why-item"><h3><span>08</span>Finnish company</h3><p>Local service, local data handling and a team that works in the field with you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE -->
+<section id="case" class="alt">
+  <div class="wrap">
+    <div class="case">
+      <div>
+        <p class="eyebrow">Field trial</p>
+        <h2>Tohmajärvi, North Karelia</h2>
+        <p>Three autonomous drones patrolled roughly 120 hectares of farmland at about 60 metres altitude, mimicking the flight of a bird of prey. Goose flocks were moved off the fields effectively — with no physical contact with the birds and no farmer standing in the field.</p>
+        <p>The same autonomy that protects a crop field protects a pipeline, a substation or a border line.</p>
+      </div>
+      <div class="nums">
+        <div><b>3</b><span>autonomous drones</span></div>
+        <div><b>~120</b><span>hectares covered</span></div>
+        <div><b>~60 m</b><span>patrol altitude</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From first call to protected site</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Tell us about the site</h3><p>Location, size, what you need to protect and from what.</p></div>
+      <div class="step"><h3>Site assessment</h3><p>We review the area and propose the right mix of towers and drones.</p></div>
+      <div class="step"><h3>Deployment</h3><p>Install, configure patrol routes and alert rules, connect your team.</p></div>
+      <div class="step"><h3>Operate &amp; support</h3><p>The system runs itself; we monitor, maintain and update it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>Common questions</h2>
+    </div>
+    <details><summary>Do I need a drone pilot?</summary><p>No. Drones launch, fly and land autonomously from the SkyNest station. Operations are supervised remotely in line with aviation rules.</p></details>
+    <details><summary>Are the drones armed or able to intervene?</summary><p>No. Rumble Tools systems are for detection, inspection and verification only — they have no offensive capability.</p></details>
+    <details><summary>Is goose deterrence legal for a protected species?</summary><p>Yes. The barnacle goose is protected under the EU Birds Directive, so methods must not harm the birds. Our drones only scare flocks away by their presence and flight pattern, with no physical contact.</p></details>
+    <details><summary>Does it work in winter?</summary><p>The systems are designed for Nordic conditions — darkness, snow and frost. Thermal cameras and radar keep working when ordinary cameras cannot see.</p></details>
+    <details><summary>Can I buy, lease or order it as a service?</summary><p>Contact us — we tailor the model to your site, whether that is a one-off deployment, a seasonal service (e.g. goose season) or a long-term surveillance contract.</p></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 style="margin-bottom:6px">Let's protect your site.</h2>
+        <p>Tell us what you need to watch — we'll suggest the right tools and send an offer.</p>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Contact Rumble Tools</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Rumble Tools Oy</b><br>Autonomous drone &amp; sensor systems · North Karelia, Finland<br>© <span id="y"></span> Rumble Tools Oy. All rights reserved.</div>
+    <div><a href="mailto:info@rumbletools.fi">info@rumbletools.fi</a><br><a href="tel:+3580600418809">0600 418 809</a> (service number, charged)<br><a href="contact.html">Contact page →</a></div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
