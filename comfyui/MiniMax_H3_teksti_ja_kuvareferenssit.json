@@ -1,0 +1,804 @@
+{
+  "id": "71b7d235-f16a-4809-8196-8064a754a249",
+  "revision": 0,
+  "last_node_id": 9,
+  "last_link_id": 7,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        520,
+        460
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "OHJE – lue ensin",
+      "properties": {},
+      "widgets_values": [
+        "MINIMAX H3 – TEKSTI + KUVAREFERENSSIT\n======================================\nH3 on MiniMaxin pilvimalli (Comfy Partner/API Node). Mallia EI ladata koneelle – ajo tapahtuu Comfy.orgin pilvessä ja maksetaan Comfy-krediiteillä. Kirjaudu: Settings → User → Sign in (tai API key).\n\n1) Kirjoita ohje PROMPT-laatikkoon (vasemmalla). Sama teksti menee molemmille ryhmille.\n\n2) Valitse tila:\n   A = VAIN TEKSTI → video\n   B = TEKSTI + KUVAT → video\n   Klikkaa ryhmän otsikkopalkkia (valitsee ryhmän solmut) ja paina Ctrl+B kytkeäksesi päälle/pois. Pidä vain toinen ryhmä päällä.\n   (Oletus: A päällä, B pois.)\n\n3) Ryhmässä B: lataa kuvat \"Kuva 1/2/3\" -solmuihin. Viittaa niihin promptissa: \"Image 1\", \"Image 2\"...\n   - Tarvitsetko vain 1 kuvan? Valitse \"Kuva 2\" ja \"Kuva 3\" ja paina Ctrl+B (ohitus).\n   - Lisää kuvia (max 9): lisää Load Image ja vedä se H3-solmun seuraavaan tyhjään image_N-paikkaan.\n   - Kuvat: väh. 256×256 px, kuvasuhde 2:5 – 5:2.\n   - Myös referenssivideot (max 3) ja -äänet voi kytkeä samaan solmuun.\n\n4) Paina Run (Ctrl+Enter). Video tallentuu: output/video/\n\nAsetukset H3-solmussa: model (H3 / H3 Max), resolution 768P / 2K, ratio, duration 4–15 s. Hinta näkyy solmun hintamerkissä."
+      ],
+      "widgets_values_named": {
+        "text": "MINIMAX H3 – TEKSTI + KUVAREFERENSSIT\n======================================\nH3 on MiniMaxin pilvimalli (Comfy Partner/API Node). Mallia EI ladata koneelle – ajo tapahtuu Comfy.orgin pilvessä ja maksetaan Comfy-krediiteillä. Kirjaudu: Settings → User → Sign in (tai API key).\n\n1) Kirjoita ohje PROMPT-laatikkoon (vasemmalla). Sama teksti menee molemmille ryhmille.\n\n2) Valitse tila:\n   A = VAIN TEKSTI → video\n   B = TEKSTI + KUVAT → video\n   Klikkaa ryhmän otsikkopalkkia (valitsee ryhmän solmut) ja paina Ctrl+B kytkeäksesi päälle/pois. Pidä vain toinen ryhmä päällä.\n   (Oletus: A päällä, B pois.)\n\n3) Ryhmässä B: lataa kuvat \"Kuva 1/2/3\" -solmuihin. Viittaa niihin promptissa: \"Image 1\", \"Image 2\"...\n   - Tarvitsetko vain 1 kuvan? Valitse \"Kuva 2\" ja \"Kuva 3\" ja paina Ctrl+B (ohitus).\n   - Lisää kuvia (max 9): lisää Load Image ja vedä se H3-solmun seuraavaan tyhjään image_N-paikkaan.\n   - Kuvat: väh. 256×256 px, kuvasuhde 2:5 – 5:2.\n   - Myös referenssivideot (max 3) ja -äänet voi kytkeä samaan solmuun.\n\n4) Paina Run (Ctrl+Enter). Video tallentuu: output/video/\n\nAsetukset H3-solmussa: model (H3 / H3 Max), resolution 768P / 2K, ratio, duration 4–15 s. Hinta näkyy solmun hintamerkissä."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        600,
+        40
+      ],
+      "size": [
+        460,
+        260
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "value",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1,
+            2
+          ]
+        }
+      ],
+      "title": "PROMPT (teksti-input)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A cinematic shot of the drone from Image 1 lifting off from its docking station at dawn, slow camera orbit, realistic lighting, Nordic forest in the background."
+      ],
+      "widgets_values_named": {
+        "value": "A cinematic shot of the drone from Image 1 lifting off from its docking station at dawn, slow camera orbit, realistic lighting, Nordic forest in the background."
+      }
+    },
+    {
+      "id": 3,
+      "type": "MinimaxHailuo03TextToVideoNode",
+      "pos": [
+        1140,
+        80
+      ],
+      "size": [
+        420,
+        330
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "prompt",
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          },
+          "link": 1
+        },
+        {
+          "localized_name": "resolution",
+          "name": "model.resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ratio",
+          "name": "model.ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "watermark",
+          "name": "watermark",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "watermark"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "H3 – Teksti → Video",
+      "properties": {
+        "Node name for S&R": "MinimaxHailuo03TextToVideoNode"
+      },
+      "widgets_values": [
+        "MiniMax H3",
+        "",
+        "768P",
+        "16:9",
+        5,
+        42,
+        "randomize",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "MiniMax H3",
+        "model.prompt": "",
+        "model.resolution": "768P",
+        "model.ratio": "16:9",
+        "model.duration": 5,
+        "seed": 42,
+        "control_after_generate": "randomize",
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "SaveVideo",
+      "pos": [
+        1600,
+        80
+      ],
+      "size": [
+        420,
+        400
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 3
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "format.codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format.codec"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "codec",
+          "shape": 7,
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "title": "Tallenna video (A)",
+      "properties": {},
+      "widgets_values": [
+        "video/H3_teksti",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/H3_teksti",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        600,
+        620
+      ],
+      "size": [
+        400,
+        340
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Kuva 1 (Image 1)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 6,
+      "type": "LoadImage",
+      "pos": [
+        600,
+        1000
+      ],
+      "size": [
+        400,
+        340
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Kuva 2 (Image 2)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        600,
+        1380
+      ],
+      "size": [
+        400,
+        340
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Kuva 3 (Image 3)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 8,
+      "type": "MinimaxHailuo03ReferenceNode",
+      "pos": [
+        1140,
+        620
+      ],
+      "size": [
+        420,
+        420
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "prompt",
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          },
+          "link": 2
+        },
+        {
+          "localized_name": "resolution",
+          "name": "model.resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ratio",
+          "name": "model.ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "image_1",
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "localized_name": "image_2",
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "localized_name": "image_3",
+          "name": "model.reference_images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "localized_name": "image_4",
+          "name": "model.reference_images.image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "video_1",
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "localized_name": "audio_1",
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "watermark",
+          "name": "watermark",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "watermark"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "H3 – Teksti + kuvat → Video",
+      "properties": {
+        "Node name for S&R": "MinimaxHailuo03ReferenceNode"
+      },
+      "widgets_values": [
+        "MiniMax H3",
+        "",
+        "768P",
+        "adaptive",
+        5,
+        42,
+        "randomize",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "MiniMax H3",
+        "model.prompt": "",
+        "model.resolution": "768P",
+        "model.ratio": "adaptive",
+        "model.duration": 5,
+        "seed": 42,
+        "control_after_generate": "randomize",
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 9,
+      "type": "SaveVideo",
+      "pos": [
+        1600,
+        620
+      ],
+      "size": [
+        420,
+        400
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 4
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "format.codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format.codec"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "codec",
+          "shape": 7,
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "title": "Tallenna video (B)",
+      "properties": {},
+      "widgets_values": [
+        "video/H3_referenssi",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/H3_referenssi",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "VIDEO"
+    ],
+    [
+      4,
+      8,
+      0,
+      9,
+      0,
+      "VIDEO"
+    ],
+    [
+      2,
+      2,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      5,
+      0,
+      8,
+      4,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      8,
+      5,
+      "IMAGE"
+    ],
+    [
+      7,
+      7,
+      0,
+      8,
+      6,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": "#3f789e",
+      "title": "A) VAIN TEKSTI → VIDEO",
+      "bounding": [
+        1110,
+        0,
+        940,
+        520
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": "#88a",
+      "title": "B) TEKSTI + KUVAREFERENSSIT → VIDEO",
+      "bounding": [
+        570,
+        540,
+        1480,
+        1220
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9,
+      "offset": [
+        416,
+        110
+      ]
+    }
+  },
+  "version": 0.4
+}
